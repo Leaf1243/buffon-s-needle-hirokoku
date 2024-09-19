@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="title"> blood pressure</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="基本画面.html">Home</a></li>
+                <li><a href="access.html">Access</a></li>
+                <li><a href="event.html">EventS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>円周率：ビュフォンの針</h2>
+        </section>
+        <section>
+            <p>平面上に間隔d で平行線を引く。長さl (≤d) の針を適当に投げたとき，針が線と交わる確率は<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">2l</span>
+                <span style="padding: 0 10px;">Pid</span>
+               </span> である。</p>
+               <p>確率に円周率が登場するので、下記の実験で円周率の近似値を出すことができる。</p>
+               <h3>実験</h3>
+               <p>ランダムに針を間隔d で平行線が引かれた紙に投げる。計算を簡単にするためにd=2lとして実験する。</p>
+               <p>このとき針が線と交わる確率は<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+                <span style="padding: 0 10px;">Pi</span>
+               </span>となる。</p>
+               <p>例えば 1000 回針を投げてそのうち n 回が直線と交わった場合，<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">n</span>
+                <span style="padding: 0 10px;">1000</span>
+               </span>≒<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+                <span style="padding: 0 10px;">Pi</span>
+               </span></p>
+              <p>したがって、Pi≒<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1000</span>
+                <span style="padding: 0 10px;">n</span>
+               </span>となる。</p>
+        </section>
+        <section>
+            <h3>確率の計算方法</h3>
+            <p>まずは、ランダムに投げた針の状態がどのようになるのかを数学的に決める。</p>
+            <p>投げた針の中心 A から最も近い線までの距離を y とする。</p>
+            <p>0≤y≤<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">d</span>
+                <span style="padding: 0 10px;">2</span>
+               </span></p>
+            <p>また，針と直線のなす角を θ とする。</p>
+            <p>0≤y≤<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">Pi</span>
+                <span style="padding: 0 10px;">2</span>
+               </span>とする。</p>
+            <p>ランダムに針を投げたということは針の中心 A の座標はランダム、かつ、針がどの方向を向くかはランダムということになる。</p>
+            <p>よって、針が線と交わるということはy≤ <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+                <span style="padding: 0 10px;">2</span>
+               </span>sinθ</p>
+            <p>なので、y と  θ をランダムに決めたときにy≤ <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+                <span style="padding: 0 10px;">2</span>
+               </span>sinθとなる確率を求める必要がある。</p>
+            <p>y と  θ をランダムに決めることは図の長方形内にランダムに一つ点を取ることと同じである。</p>
+            <p>その確率は</p>
+            <p>長方形の面積が<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">pid</span>
+                <span style="padding: 0 10px;">4</span>
+               </span></p>
+               <p>青い部分の面積は ∫ <sup>0</sup><sub>π</sub><span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">l</span>
+                <span style="padding: 0 10px;">2</span>
+               </span>sinθdθ=<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                <span style="padding: 0 10px; border-bottom: 1px solid #000000;">l</span>
+                <span style="padding: 0 10px;">2</span>
+               </span>である。
+                ​
+                 </p>
+                <p>したがって、確率は<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                    <span style="padding: 0 10px; border-bottom: 1px solid #000000;">l</span>
+                    <span style="padding: 0 10px;">2</span>
+                   </span>÷<span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                    <span style="padding: 0 10px; border-bottom: 1px solid #000000;">pid</span>
+                    <span style="padding: 0 10px;">4</span>
+                   </span>より、</p>
+                   <p><span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                    <span style="padding: 0 10px; border-bottom: 1px solid #000000;">2l</span>
+                    <span style="padding: 0 10px;">Pid</span>
+                   </span>となる。</p>
+        </section>
+    </main>
+</body>
+</html>
